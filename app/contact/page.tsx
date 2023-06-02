@@ -5,11 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 
 export default function Contact() {
-    const router = useRouter()
     return (
         <main className="flex justify-center items-center h-screen">
             <div>
