@@ -1,4 +1,5 @@
 import Navigation from '@/components/navigation/Navigation'
+import { Hero } from '@/components/ui/hero'
 
 export default function Home() {
   const klass = [
@@ -10,7 +11,7 @@ export default function Home() {
       <Navigation />
       <div className='pt-[96px]'>
         <main className={klass}>
-          HOME
+          <Hero />
         </main>
       </div>
     </>
