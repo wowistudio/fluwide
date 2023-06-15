@@ -1,12 +1,12 @@
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
+import { Field, FieldProps } from "formik"
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> { }
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
+const Input = React.forwardRef<HTMLInputElement, InputProps & { field?: Partial<InputProps> }>(
+  ({ className, type, field, ...props }, ref) => {
     return (
       <input
         type={type}
@@ -15,11 +15,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           className
         )}
         ref={ref}
+        {...field}
         {...props}
       />
     )
   }
 )
+
 Input.displayName = "Input"
 
 export { Input }
