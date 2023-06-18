@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from "@/components/ui/button";
+import { classes } from "@/lib/utils";
 import {
     HiOutlineHome,
     HiOutlineUser,
@@ -11,16 +12,10 @@ import {
     HiDownload
 } from "react-icons/hi";
 
-export default () => {
+const About: React.FC<React.ComponentProps<"div">> = ({ className, ...props }) => {
+    const klass = classes(className, "text-sm relative")
     return (
-        <div className="text-sm relative">
-            <div className="absolute right-0 flex justify-end p-6">
-                <Button onClick={() => console.log("DOWNLOAD")}>
-                    <HiDownload />
-                    <span className="ml-1">Download CV</span>
-                </Button>
-            </div>
-
+        <div className={klass} {...props}>
             <div className="p-6">
                 <p className='m-0 uppercase'>BASICS</p>
                 <div className='flex items-center mt-3 font-medium'>
@@ -40,16 +35,16 @@ export default () => {
 
             </div>
 
-            <div className="bg-white dark:bg-gray-100 dark:bg-opacity-25 p-6 rounded shadow-gray-100">
+            <div className="bg-primary dark:bg-gray-100 dark:bg-opacity-25 p-6 rounded shadow-gray-100">
                 <p className='m-0 uppercase'>EDUCATION</p>
                 <div className='flex items-center mt-3 font-medium'>
                     <HiOutlineLibrary />
-                    <p className="pl-2">Science, Business & Innovation (VU Amsterdam)</p>
+                    <p className="pl-2">Science, Business & Innovation (VU&nbsp;Amsterdam)</p>
                 </div>
 
                 <div className='flex items-center mt-3 font-medium'>
                     <HiOutlineOfficeBuilding />
-                    <p className="pl-2">Industrial Ecology (TU Delft)</p>
+                    <p className="pl-2">Industrial Ecology (TU&nbsp;Delft)</p>
                 </div>
 
                 <div className='flex items-center mt-3 font-medium'>
@@ -57,6 +52,15 @@ export default () => {
                     <p className="pl-2" title="3">Full Stack Course (NYCDA)</p>
                 </div>
             </div>
+
+            <div className="lg:absolute right-0 top-0 lg:flex justify-end p-6">
+                <Button onClick={() => console.log("DOWNLOAD")}>
+                    <HiDownload />
+                    <span className="ml-1">Download CV</span>
+                </Button>
+            </div>
         </div>
     )
 }
+
+export default About

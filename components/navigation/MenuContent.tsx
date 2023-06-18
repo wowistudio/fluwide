@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from "react"
-import { MenuAnimationDirection } from "./Navigation"
 import { Menu } from "./NavMenu"
+import { MenuAnimationDirection } from "./NavDesktop"
 
 type BgClass = "bg-blue-100" | "bg-gray-100" | "white"
 
@@ -20,8 +20,7 @@ const MenuContent: React.FC<Props> = ({
     animationDirection,
     menu,
     order,
-    setMenuHeight,
-    background = "white"
+    setMenuHeight
 }) => {
     const ref = useRef<HTMLDivElement>(null)
     const innerRef = useRef<HTMLElement>(null)
@@ -61,7 +60,7 @@ const MenuContent: React.FC<Props> = ({
             style={{ width, height }}
             className={klass}
         >
-            <section ref={innerRef} className={`p-2`}>
+            <section ref={innerRef} className="p-4">
                 {children}
             </section>
         </div>

@@ -1,6 +1,6 @@
-const ListItem = ({ onClick }: { onClick?: () => void }) => {
+const ListItem: React.FC<React.ComponentProps<"div">> = (props) => {
     return (
-        <div className='my-2 mx-4 flex items-center justify-center' onClick={onClick}>
+        <div {...props}>
             <div className="font-bold">FLUWIDE</div>
         </div>
     )

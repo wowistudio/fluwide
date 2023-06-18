@@ -1,7 +1,7 @@
 import { useRef } from "react"
-import { MenuIdentifier } from "./Navigation"
+import { NavListItemsProps } from "./NavListItems"
 
-interface Props {
+interface ListItemProps {
     width: number
     order: number
     activeOrder: number
@@ -10,7 +10,7 @@ interface Props {
     onMouseLeave: () => void
 }
 
-const ListItem: React.FC<Props> = ({
+const ListItem: React.FC<ListItemProps> = ({
     children,
     activeOrder,
     onMouseEnter,

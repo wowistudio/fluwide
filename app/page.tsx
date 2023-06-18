@@ -1,5 +1,7 @@
+import Projects from '@/app/(home)/projects'
 import Navigation from '@/components/navigation/Navigation'
-import { Hero } from '@/components/ui/hero'
+import { Hero } from '@/app/(home)/hero'
+import Link from 'next/link'
 
 export default function Home() {
   const klass = [
@@ -9,11 +11,11 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <div className='pt-[96px]'>
-        <main className={klass}>
-          <Hero />
-        </main>
-      </div>
+      <main className={klass}>
+        <Link href="/contact" prefetch />
+        <Hero />
+        <Projects />
+      </main>
     </>
   )
 }

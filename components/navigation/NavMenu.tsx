@@ -1,3 +1,4 @@
+import { classes } from "@/lib/utils"
 import { RefObject, useEffect, useRef, useState } from "react"
 
 export interface Menu {
@@ -17,7 +18,7 @@ type Props = {
     onMouseLeave: () => void
 }
 
-const PADDING = 16 // px
+const PADDING = 20 // px
 const OFFSET_LEFT_STEP = 100; // px
 const MIN_ARROW_GAP_LEFT = 100; // px
 
@@ -66,12 +67,9 @@ const Menu: React.FC<Props> = ({
         }
     }, [menu])
 
-    const innerklass = [
-        "bg-secondary overflow-hidden relative rounded-lg w-full h-full shadow-xl",
-    ].join(' ')
-
     return (
         <div
+            id="navMenu"
             ref={ref}
             className="relative transform"
             onMouseEnter={onMouseEnter}
@@ -85,7 +83,7 @@ const Menu: React.FC<Props> = ({
                 opacity
             }}
         >
-            <div className={innerklass}>
+            <div id="navMenuInner" className={classes("bg-secondary bg-opacity-25 overflow-hidden relative rounded-lg w-full h-full shadow-xl")}>
                 {children}
             </div>
         </div>

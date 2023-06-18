@@ -13,7 +13,7 @@ export default function ContactPage() {
                     back to home
                 </Link>
 
-                <div className="bg-secondary grid w-full gap-4 rounded-b-lg border bg-background p-6 sm:max-w-lg sm:rounded-lg mt-6">
+                <div className=" grid w-full gap-4 rounded-b-lg border bg-background p-6 sm:max-w-lg sm:rounded-lg mt-6">
                     <div className="flex flex-col space-y-1.5 text-center sm:text-left">
                         <h2 className="text-lg font-semibold leading-none tracking-tight">👋 Hello</h2>
                         <p className="text-sm text-muted-foreground">Leave your email &amp; some content and we'll make it work.</p>

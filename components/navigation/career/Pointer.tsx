@@ -3,12 +3,10 @@ import { TListItem } from "./Career"
 
 type Props = {
     item: TListItem
-    show: boolean
     containerTop?: number
-    prevOrder: number
 }
 
-const Pointer: React.FC<Props> = ({ item, show, containerTop, prevOrder }) => {
+const Pointer: React.FC<Props> = ({ item, containerTop }) => {
     const ref = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
