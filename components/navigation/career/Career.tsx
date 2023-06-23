@@ -50,7 +50,7 @@ export const CareerContent: React.FC<CareerContentProps> = ({ item, ...props }) 
                 </div>
             )}
 
-            {!!careerLanguages && (
+            {!!careerLanguages.length && (
                 <div className="pt-6">
                     <div className='uppercase mt-6'>languages</div>
                     <ul className='flex flex-wrap gap-4 mt-3'>

@@ -124,8 +124,8 @@ const MenuFoldBody: React.FC<MenuFoldBodyProps> = ({ setActiveSubItem, activeSub
                 </ul>
 
                 {careerItems.map((item, key) => (
-                    <MenuSubItem setMenuHeight={onSubItemRender} order={Number(`1${key + 1}`)} activeSubItem={activeSubItem}>
-                        <CareerContent key={key} item={item} className="p-4" />
+                    <MenuSubItem key={key} setMenuHeight={onSubItemRender} order={Number(`1${key + 1}`)} activeSubItem={activeSubItem}>
+                        <CareerContent item={item} className="p-4" />
                     </MenuSubItem>
                 ))}
 

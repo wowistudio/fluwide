@@ -77,7 +77,10 @@ export default () => {
                     cancelResetMenu={cancelResetMenu}
                 />
 
-                <MenuFoldoutTablet showMenu={showMenuTablet} />
+                <MenuFoldoutTablet
+                    showMenu={showMenuTablet}
+                    setShowMenu={setShowMenuTablet}
+                />
             </div>
         </div>
     )

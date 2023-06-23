@@ -20,7 +20,7 @@ export const metadata = {
 
 export default function RootLayout(props: RootLayoutProps) {
   return (
-    <html lang="en" className={true ? "dark" : ""}>
+    <html lang="en" className={false ? "dark" : ""}>
       <body>
         <div className={klass}>
           {props.children}
