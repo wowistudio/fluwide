@@ -35,7 +35,7 @@ const About: React.FC<React.ComponentProps<"div">> = ({ className, ...props }) =
 
             </div>
 
-            <div className="bg-primary dark:bg-gray-100 dark:bg-opacity-25 p-6 rounded shadow-gray-100">
+            <div className="bg-tertiary text-tertiary-foreground dark:bg-gray-100 dark:bg-opacity-25 p-6 rounded shadow-gray-100">
                 <p className='m-0 uppercase'>EDUCATION</p>
                 <div className='flex items-center mt-3 font-medium'>
                     <HiOutlineLibrary />

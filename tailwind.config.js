@@ -32,6 +32,10 @@ module.exports = {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        tertiary: {
+          DEFAULT: "hsl(var(--tertiary))",
+          foreground: "hsl(var(--tertiary-foreground))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -59,7 +63,8 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       transitionDuration: {
-        '400': '400ms'
+        '400': '400ms',
+        '600': '600ms'
       },
       keyframes: {
         "accordion-down": {

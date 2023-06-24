@@ -25,6 +25,9 @@
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
+    --tertiary: 210 40% 90%;
+    --tertiary-foreground: 222.2 47.4% 11.2%;
+
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
@@ -57,6 +60,9 @@
 
     --secondary: 217, 33%, 17%;
     --secondary-foreground: 210 40% 98%;
+
+    --tertiary: 210 40% 90%;
+    --tertiary-foreground: 210 40% 98%;
 
     --accent: 216 34% 17%;
     --accent-foreground: 210 40% 98%;

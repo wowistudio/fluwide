@@ -19,9 +19,7 @@ type MenuListItemProps = ArrayType<typeof navItems> & {
 
 type MenuSubItemProps = {
     children: ReactNode,
-    order: number,
     activeSubItem: number,
-    setMenuHeight: (height: number) => void
 }
 
 const MenuListItem: React.FC<MenuListItemProps> = ({ onClickSubItem, ...item }) => {
@@ -63,80 +61,71 @@ const MenuListItem: React.FC<MenuListItemProps> = ({ onClickSubItem, ...item }) 
     )
 };
 
-const MenuSubItem: React.FC<MenuSubItemProps> = ({ setMenuHeight, activeSubItem, order, children }) => {
-    const ref = useRef<HTMLDivElement>(null);
-
-    const klass = classes(
-        "absolute transition duration-400 right-0 top-0 translate-x-[100%]",
-        (activeSubItem === order) ? "opacity-1" : "opacity-0 "
-    )
+const MenuSubItemContent: React.FC<Omit<MenuSubItemProps, "setMenuHeight"> & { order: number }> = ({ activeSubItem, children, order }) => {
+    const ref = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
-        setMenuHeight(ref.current?.getBoundingClientRect().height || 0)
-    }, [ref.current])
+        if (activeSubItem < 0) {
+            ref.current?.classList.remove('visible')
+            setTimeout(() => ref.current?.classList.add('invisible'), 400)
+        } else if (activeSubItem === order) {
+            ref.current?.classList.remove('invisible')
+            setTimeout(() => ref.current?.classList.add('visible'), 0)
+        }
+    }, [order, activeSubItem])
 
-    return (
-        <div ref={ref} className={klass}>
-            {children}
-        </div>
+    const klass = classes(
+        "absolute top-0 transition duration-400 ease-in-out bg-card h-full w-full",
+        activeSubItem === order ? "-translate-x-1/2" : ""
     )
+
+    return <div ref={ref} className={klass}>{children}</div>
+}
+
+const MenuSubItem: React.FC<MenuSubItemProps> = ({ activeSubItem, children }) => {
+    const klass = classes(
+        "w-full relative transition-400",
+        activeSubItem > -1 ? "visible" : "visible"
+    )
+
+    return <div className={klass}>{children}</div>
 };
 
 const MenuFoldBody: React.FC<MenuFoldBodyProps> = ({ setActiveSubItem, activeSubItem }) => {
     const uListref = useRef<HTMLUListElement>(null);
-    const ref = useRef<HTMLDivElement>(null);
-    // const [menuHeight, setMenuHeight] = useState(0);
-
-    useEffect(() => {
-        onSubItemRender(ref.current?.getBoundingClientRect().height || 0)
-    }, [ref.current])
-
-    const onClickSubItem = (order: number) => {
-        setActiveSubItem(order)
-    }
-
-    const onSubItemRender = (height: number) => {
-        // if (height > menuHeight)
-        //     setMenuHeight(height)
-    }
 
     const klass = classes(
-        "transition duration-400 ease-out",
-        activeSubItem > 0 && "-translate-x-full"
+        "relative flex transition duration-600 ease-out w-[200%]",
+        activeSubItem > 0 && "-translate-x-[25%]"
     )
-    return (
-        <div
-            className="relative"
-        // style={{ height: `${menuHeight}px` }}
-        >
-            <div
-                ref={ref}
-                className={klass}
-            >
-                <ul ref={uListref}>
-                    {navItems.map((item, key) => (
-                        <MenuListItem
-                            key={key}
-                            onClickSubItem={onClickSubItem}
-                            {...item}
-                        />
-                    ))}
-                </ul>
 
+    return (
+        <div className={klass}>
+            <ul ref={uListref} className="w-full">
+                {navItems.map((item, key) => (
+                    <MenuListItem
+                        key={key}
+                        onClickSubItem={setActiveSubItem}
+                        {...item}
+                    />
+                ))}
+            </ul>
+
+            <MenuSubItem activeSubItem={activeSubItem}>
                 {careerItems.map((item, key) => (
-                    <MenuSubItem key={key} setMenuHeight={onSubItemRender} order={Number(`1${key + 1}`)} activeSubItem={activeSubItem}>
+                    <MenuSubItemContent key={key} activeSubItem={activeSubItem} order={Number(`1${key + 1}`)}>
                         <CareerContent item={item} className="p-4" />
-                    </MenuSubItem>
+                    </MenuSubItemContent>
                 ))}
 
-                <MenuSubItem setMenuHeight={onSubItemRender} order={2} activeSubItem={activeSubItem}>
+                <MenuSubItemContent activeSubItem={activeSubItem} order={2}>
                     <About />
-                </MenuSubItem>
+                </MenuSubItemContent>
 
-                <MenuSubItem setMenuHeight={onSubItemRender} order={3} activeSubItem={activeSubItem}>
+                <MenuSubItemContent activeSubItem={activeSubItem} order={3}>
                     <Languages />
-                </MenuSubItem>
-            </div>
+                </MenuSubItemContent>
+            </MenuSubItem>
         </div>
     )
 };

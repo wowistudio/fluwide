@@ -44,7 +44,7 @@ export const CareerContent: React.FC<CareerContentProps> = ({ item, ...props }) 
 
             {!!item.withContactButton && (
                 <div className='mt-6'>
-                    <Button onClick={() => router.push('contact')}>
+                    <Button variant="secondary" onClick={() => router.push('contact')}>
                         contact
                     </Button>
                 </div>
@@ -117,7 +117,7 @@ const Career: React.FC<Props> = ({ navOrder, menu }) => {
                 />
             </div>
 
-            <div className='flex-1 relative bg-primary dark:bg-gray-100 dark:bg-opacity-25 rounded overflow-hidden'>
+            <div className='flex-1 relative bg-tertiary text-tertiary-foreground dark:bg-gray-100 dark:bg-opacity-25 rounded overflow-hidden'>
                 {careerItems.map((item, key) => (
                     <Content
                         key={key}

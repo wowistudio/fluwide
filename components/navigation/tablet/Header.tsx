@@ -21,7 +21,7 @@ const Header: React.FC<Props> = ({ setActiveSubItem, activeSubItem, onExit }) =>
     )
 
     return (
-        <div className="relative p-4 leading-4 flex items-center">
+        <div className="relative p-4 py-6 leading-4 flex items-center">
             <Button variant="ghost" onClick={onExit} className="absolute right-1 cursor-pointer" >
                 <HiOutlineX height="1.2em" width="1.2em" />
             </Button>

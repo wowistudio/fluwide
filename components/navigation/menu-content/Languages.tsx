@@ -107,7 +107,7 @@ const Languages: FC<React.ComponentProps<"div">> = ({ className, ...props }) => 
                 </ul>
             </div>
 
-            <div className="bg-primary dark:bg-gray-100 dark:bg-opacity-25 p-6 rounded shadow-gray-100">
+            <div className="bg-tertiary text-tertiary-foreground dark:bg-gray-100 dark:bg-opacity-25 p-6 rounded shadow-gray-100">
                 <p className='m-0 uppercase'>OPERATIONS</p>
                 <ul className='flex flex-wrap gap-4 mt-3'>
                     {operationsLanguages.map(lang => <LanguageItem key={lang.language} {...lang} />)}
