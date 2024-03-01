@@ -1,6 +1,6 @@
 'use client';
 
-import { FaReact } from 'react-icons/fa';
+import {FaLinkedin, FaReact} from 'react-icons/fa';
 import { Menu } from '../NavMenu';
 import Content from './Content';
 import ListItem from './ListItem';
@@ -13,6 +13,7 @@ import { careerItems } from '../content';
 import { ArrayType } from '@/lib/typeUtils';
 import { TLanguageItem, languages } from '../menu-content/Languages';
 import LanguageItem from '../menu-content/LanguageItem';
+import {Linkedin} from "lucide-react";
 
 export type Identifier = "frits" | "biller" | "vonwood" | "next"
 export type AnimationDirection = "up" | "down"
@@ -43,7 +44,16 @@ export const CareerContent: React.FC<CareerContentProps> = ({ item, ...props }) 
             </ul>
 
             {!!item.withContactButton && (
-                <div className='mt-6'>
+                <div className='mt-6 flex gap-2'>
+                    <a
+                        target="_blank"
+                        href="https://www.linkedin.com/in/jeroen-huisman/"
+                        className="flex items-center gap-2 justify-center rounded-md text-sm font-medium transition-colors h-10 py-2 px-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background border border-input hover:bg-accent hover:text-accent-foreground  "
+                    >
+                        <FaLinkedin />
+                        <span>LinkedIn</span>
+                    </a>
+
                     <Button variant="secondary" onClick={() => router.push('contact')}>
                         contact
                     </Button>

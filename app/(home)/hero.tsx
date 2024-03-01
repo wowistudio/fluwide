@@ -8,7 +8,7 @@ import Bubble from './bubble';
 export function Hero() {
   const router = useRouter()
   return (
-    <Container className="relative pb-24 pt-[96px] text-center lg:pt-32 h-screen flex items-center">
+    <Container className="relative pb-24 pt-[96px] text-center lg:pt-32 h-[calc(100dvh)] flex items-center">
       <div className='w-full'>
         <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight sm:text-7xl pointer-events-none">
           Fluid{' '}

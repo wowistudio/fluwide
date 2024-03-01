@@ -9,7 +9,7 @@ type RootLayoutProps = {
 const inter = Poppins({ subsets: ['latin-ext'], weight: ["300", "400", "500", "600", "700", "800"] })
 
 const klass = [
-  "mx-auto px-4 min-h-screen max-w-[1080px]",
+  "mx-auto px-4 min-h-[calc(100dvh)] max-w-[1080px]",
   inter.className
 ].join(' ')
 
@@ -20,7 +20,7 @@ export const metadata = {
 
 export default function RootLayout(props: RootLayoutProps) {
   return (
-    <html lang="en" className={false ? "dark" : ""}>
+    <html lang="en" className={true ? "dark" : ""}>
       <body>
         <div className={klass}>
           {props.children}

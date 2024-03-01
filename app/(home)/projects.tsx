@@ -1,6 +1,8 @@
 import { ArrayType } from "@/lib/typeUtils"
 import Link from "next/link"
 import { HiArrowRight, HiCalendar, HiMusicNote, HiTicket } from "react-icons/hi"
+import {ArrowBigDownDash} from "lucide-react";
+import {FaArrowDown} from "react-icons/all";
 
 export const hobbyProjects = [
     {
@@ -63,8 +65,9 @@ const Project: React.FC<ArrayType<typeof hobbyProjects>> = ({ id, subTitle, titl
 export default function Projects() {
     return (
         <div className="relative grid sm:grid-cols-2 sm:gap-10 gap-4 pb-20">
-            <div className='absolute -top-20 pl-6 text-md'>
+            <div className='absolute -top-20 pl-6 text-md flex items-center gap-2'>
                 Hobby projects
+                <FaArrowDown />
             </div>
             {hobbyProjects.map((project, key) => <Project {...project} key={key} />)}
         </div>

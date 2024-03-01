@@ -7,7 +7,7 @@ export default function ProjectPage(props: PageProps) {
     const projects = hobbyProjects.find((project) => project.id === props.params?.id)
 
     return (
-        <main className="flex justify-center items-center h-screen">
+        <main className="flex justify-center items-center h-[calc(100dvh)]">
             <div>
                 <Link href="/" className="flex items-center">
                     <HiArrowNarrowLeft className="mr-2" />

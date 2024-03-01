@@ -8,8 +8,7 @@ import {
     HiOutlineMicrophone,
     HiOutlineLibrary,
     HiOutlineOfficeBuilding,
-    HiOutlineDesktopComputer,
-    HiDownload
+    HiOutlineDesktopComputer, HiExternalLink,
 } from "react-icons/hi";
 
 const About: React.FC<React.ComponentProps<"div">> = ({ className, ...props }) => {
@@ -54,10 +53,11 @@ const About: React.FC<React.ComponentProps<"div">> = ({ className, ...props }) =
             </div>
 
             <div className="lg:absolute right-0 top-0 lg:flex justify-end p-6">
-                <Button onClick={() => console.log("DOWNLOAD")}>
-                    <HiDownload />
-                    <span className="ml-1">Download CV</span>
-                </Button>
+                <a className="flex items-center underline">
+                    <HiExternalLink size="1.2em" />
+                    <span className="ml-1">LinkedIn
+                    </span>
+                </a>
             </div>
         </div>
     )
