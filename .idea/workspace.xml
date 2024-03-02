@@ -5,19 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b64292c4-8baa-4dbc-8f5a-07ab19840b84" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/domains/hobbies/hobbies.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tool-versions" beforeDir="false" afterPath="$PROJECT_DIR$/.tool-versions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(home)/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StripeHome.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(home)/projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/contact/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/project/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/project/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigation/career/Career.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation/career/Career.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigation/menu-content/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation/menu-content/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigation/NavDesktop.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation/NavDesktop.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigation/tablet/Body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation/tablet/Body.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigation/tablet/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation/tablet/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mesh.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,30 +37,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/jayh/code/fluwide",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "/Users/jayh/code/fluwide/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jayh/code/fluwide&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/jayh/code/personal/fluwide/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-python-sdk-67fca87a943a-c986f194a52a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.11799.259" />
-      </set>
-    </attachedChunks>
-  </component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,6 +65,8 @@
       <workItem from="1682930425760" duration="3000" />
       <workItem from="1709232679197" duration="2387000" />
       <workItem from="1709304932600" duration="9000" />
+      <workItem from="1709305015446" duration="3408000" />
+      <workItem from="1709309536828" duration="4114000" />
     </task>
     <servers />
   </component>

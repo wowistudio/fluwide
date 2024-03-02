@@ -11,7 +11,7 @@ interface Props {
 
 const Header: React.FC<Props> = ({ setActiveSubItem, activeSubItem, onExit }) => {
     const logoClass = classes(
-        "left-0 transition duration-400 ease-out",
+        "left-0 transition duration-150 ease-out",
         activeSubItem > 0 && "-translate-x-full opacity-0"
     )
 
@@ -22,7 +22,7 @@ const Header: React.FC<Props> = ({ setActiveSubItem, activeSubItem, onExit }) =>
 
     return (
         <div className="relative p-4 py-6 leading-4 flex items-center">
-            <Button variant="ghost" onClick={onExit} className="absolute right-1 cursor-pointer" >
+            <Button variant="ghost" onClick={onExit} className="absolute right-4 cursor-pointer" >
                 <HiOutlineX height="1.2em" width="1.2em" />
             </Button>
 

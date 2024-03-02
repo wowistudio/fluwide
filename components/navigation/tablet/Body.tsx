@@ -95,7 +95,7 @@ const MenuFoldBody: React.FC<MenuFoldBodyProps> = ({ setActiveSubItem, activeSub
     const uListref = useRef<HTMLUListElement>(null);
 
     const klass = classes(
-        "relative flex transition duration-600 ease-out w-[200%]",
+        "relative flex transition duration-200 ease-out w-[200%]",
         activeSubItem > 0 && "-translate-x-[25%]"
     )
 

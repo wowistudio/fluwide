@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Home() {
   const klass = [
-    "mx-auto px-4 min-h-[calc(100dvh)] JEROEN max-w-[1080px]",
+    "mx-auto min-h-[calc(100dvh)] max-w-[1080px]",
   ].join(' ')
 
   return (

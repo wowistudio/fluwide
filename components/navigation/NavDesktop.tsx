@@ -41,7 +41,7 @@ export default () => {
             <div className='p-4'>
                 <div className="flex gap-4">
                     <Link href="/" className='flex'>
-                        <div className='my-2 mx-4 flex items-center justify-center'>
+                        <div className='my-2 flex items-center justify-center'>
                             <Logo />
                         </div>
                     </Link>
@@ -58,7 +58,7 @@ export default () => {
 
                     <div className='flex-1 lg:hidden'></div>
 
-                    <nav className='my-3 mx-4 text-sm'>
+                    <nav className='my-3 text-sm'>
                         <Button variant="secondary" onClick={() => setShowMenuTablet(true)} className='lg:hidden'>
                             <HiMenu />
                         </Button>

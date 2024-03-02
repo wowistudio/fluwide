@@ -1,29 +1,11 @@
+'use client';
+
 import { ArrayType } from "@/lib/typeUtils"
 import Link from "next/link"
-import { HiArrowRight, HiCalendar, HiMusicNote, HiTicket } from "react-icons/hi"
-import {ArrowBigDownDash} from "lucide-react";
+import { HiArrowRight} from "react-icons/hi"
 import {FaArrowDown} from "react-icons/all";
+import {hobbyProjects} from "@/domains/hobbies/hobbies";
 
-export const hobbyProjects = [
-    {
-        id: "disco-bingo",
-        title: 'Disco Bingo',
-        subTitle: '[chat gpt generated] Get ready to groove and win with Disco Bingo! Say goodbye to numbers and immerse yourself in an energizing world of disco beats. Customize your playlist and mark your digital bingo card with songs of your choice. Feel the rhythm, embrace the funk, and let the music guide you to victory!',
-        icon: HiMusicNote,
-    },
-    {
-        id: "tickettrap",
-        title: 'Tickettrap',
-        subTitle: "[chat gpt generated] Streamline ticket reservations with our user-friendly app! Seamlessly integrated with Ticketswap, securing your spot at sought-after events is a breeze. Say goodbye to tedious searches and hello to hassle-free bookings. Get ready to elevate your event experience with ease and convenience.",
-        icon: HiTicket,
-    },
-    {
-        id: "bdaylert",
-        title: 'Bdaylert',
-        subTitle: "[chat gpt generated] Never forget a birthday again with our Telegram-powered app! Seamlessly synced with Google Calendar, it's your ultimate personal reminder. Stay organized and effortlessly track important dates. Say goodbye to belated wishes and hello to timely celebrations with our intuitive birthday companion.",
-        icon: HiCalendar
-    },
-]
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
@@ -63,9 +45,16 @@ const Project: React.FC<ArrayType<typeof hobbyProjects>> = ({ id, subTitle, titl
 }
 
 export default function Projects() {
+    const scrollDown = () => {
+        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+    }
+
     return (
         <div className="relative grid sm:grid-cols-2 sm:gap-10 gap-4 pb-20">
-            <div className='absolute -top-20 pl-6 text-md flex items-center gap-2'>
+            <div
+                className="absolute -top-20 pl-6 text-md flex items-center gap-2 cursor-pointer"
+                onClick={() => scrollDown()}
+            >
                 Hobby projects
                 <FaArrowDown />
             </div>
